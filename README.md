@@ -1,4 +1,7 @@
 # Getting Started with Create React App
+make sure you are using latest version of node(I used 20.18.1 version)
+
+run the command yarn in terminal to install all packages,after that run yarn start.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
