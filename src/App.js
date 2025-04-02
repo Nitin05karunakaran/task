@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Slider from "react-slick";
 
-
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -12,7 +11,7 @@ export default function Home() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
+
   function SampleArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -102,78 +101,76 @@ export default function Home() {
       },
     ],
   };
-  const testimonials = [
-    {
-      image: '/person1.webp',
-      quote: '"It seemed to be in-line with everything we were looking at."',
-      name: 'Chris Robinson',
-      position: 'Executive Account Manager, NCS'
-    },
-    {
-      image: '/person2.webp',
-      quote: '"Most complete MDM solution I found, and I tested many of them, including major names"',
-      name: 'Dalibor Kruljac',
-      position: 'KAMELEYA LTD'
-    },
-    {
-      image: '/person3.webp',
-      quote: '"Hexnode is of great value. Works great with Android and iOS!"',
-      name: 'Justin Modrak',
-      position: 'Technology Coordinator'
-    }
-  ];
+
   const features = [
     {
       title: "Zero-touch Enrollment",
-      description: "Onboard endpoints and users with minimal user intervention. Provision devices and set up configurations well before the user gets their hands on.",
-      image: "/enrolled.webp" // Replace with actual image path
+      description:
+        "Onboard endpoints and users with minimal user intervention. Provision devices and set up configurations well before the user gets their hands on.",
+      image: "/enrolled.webp", // Replace with actual image path
     },
     {
       title: "Automation",
-      description: "Automate endpoint compliance with dynamic grouping and breeze through day-to-day IT tasks with scripting capabilities. Hexnode also allows the creation of automated reports.",
-      image: "/automation.webp"
+      description:
+        "Automate endpoint compliance with dynamic grouping and breeze through day-to-day IT tasks with scripting capabilities. Hexnode also allows the creation of automated reports.",
+      image: "/automation.webp",
     },
     {
       title: "Remote Access Management",
-      description: "Hexnode UEM enables the enterprise to manage every single device in the corporate ecosystem for optimal and secure operation.",
-      image: "/remote-access.webp"
+      description:
+        "Hexnode UEM enables the enterprise to manage every single device in the corporate ecosystem for optimal and secure operation.",
+      image: "/remote-access.webp",
     },
     {
       title: "Endpoint Security and Compliance",
-      description: "Hexnode helps you maintain compliance with international regulatory bodies and set up custom rules for compliance within your business for security purposes.",
-      image: "/endpoint-security.webp"
+      description:
+        "Hexnode helps you maintain compliance with international regulatory bodies and set up custom rules for compliance within your business for security purposes.",
+      image: "/endpoint-security.webp",
     },
     {
       title: "Integrations",
-      description: "Hexnode's various integrations make it easy to fit into your current endpoint ecosystem. These integrations include Azure AD, Okta, Android Enterprise, Apple School and Business manager, and many more enterprise and technology integrations.",
-      image: "/integrations.webp"
+      description:
+        "Hexnode's various integrations make it easy to fit into your current endpoint ecosystem. These integrations include Azure AD, Okta, Android Enterprise, Apple School and Business manager, and many more enterprise and technology integrations.",
+      image: "/integrations.webp",
     },
     {
       title: "App Management",
-      description: "Set up a bespoke app store, enable mandatory apps, and ensure endpoints come equipped with all the required applications, custom enterprise apps included.",
-      image: "/app-management.webp"
-    }
+      description:
+        "Set up a bespoke app store, enable mandatory apps, and ensure endpoints come equipped with all the required applications, custom enterprise apps included.",
+      image: "/app-management.webp",
+    },
   ];
   return (
-    <><div className="relative  bg-gray-900 text-white">
-      {/* Navbar */}
-      <nav
-        className={`fixed top-0 w-full z-10 transition-all duration-300 ${scrolled ? "bg-gray-900 shadow-md" : "bg-gray-900"}`}
-      >
-        <div className="container mx-auto flex justify-between items-center py-4 px-6">
-          <div className="text-2xl font-bold">hexnode</div>
-          <div className="hidden md:flex space-x-8">
-            <div className="cursor-pointer hover:text-gray-300">Why Hexnode</div>
-            <div className="cursor-pointer hover:text-gray-300">Features</div>
-            <div className="cursor-pointer hover:text-gray-300">Platforms</div>
-            <div className="cursor-pointer hover:text-gray-300">Customers</div>
+    <>
+      <div className="relative  bg-gray-900 text-white">
+        {/* Navbar */}
+        <nav
+          className={`fixed top-0 w-full z-10 transition-all duration-300 ${
+            scrolled ? "bg-gray-900 shadow-md" : "bg-gray-900"
+          }`}
+        >
+          <div className="container mx-auto flex justify-between items-center py-4 px-6">
+            <div className="text-2xl font-bold">hexnode</div>
+            <div className="hidden md:flex space-x-8">
+              <div className="cursor-pointer hover:text-gray-300">
+                Why Hexnode
+              </div>
+              <div className="cursor-pointer hover:text-gray-300">Features</div>
+              <div className="cursor-pointer hover:text-gray-300">
+                Platforms
+              </div>
+              <div className="cursor-pointer hover:text-gray-300">
+                Customers
+              </div>
+            </div>
+            <button className="bg-red-600 px-6 py-2 text-white font-medium rounded">
+              14 DAY FREE TRIAL
+            </button>
           </div>
-          <button className="bg-red-600 px-6 py-2 text-white font-medium rounded">14 DAY FREE TRIAL</button>
-        </div>
-      </nav>
+        </nav>
 
-      {/* Hero Section */}
-      {/* <div className="container mx-auto pt-24 pb-16 px-6">
+        {/* Hero Section */}
+        {/* <div className="container mx-auto pt-24 pb-16 px-6">
       <div className="flex flex-col md:flex-row items-start justify-between gap-12">
         <div className="md:w-5/12 pt-8">
           <div className="text-gray-400 mb-4">Unified Endpoint Management</div>
@@ -214,83 +211,97 @@ export default function Home() {
         </div>
       </div>
     </div> */}
-      <div className="container mx-auto pt-24 pb-16 px-6">
-
-        <div className="flex md:flex-row flex-col-reverse justify-between md:py-2  md:mt-3">
-
-          <div className="flex flex-col justify-center items-start">
-            <div className="flex md:flex-row flex-col  p-5 ">
-
-              <div className="mr-6">
-                <div className="text-gray-400 mb-4">Unified Endpoint Management</div>
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">Gain control and visibility over your endpoints</h1>
-                <p className="text-lg mb-8 text-gray-300">
-                  Hexnode's UEM solution allows you to simplify endpoint management and free up IT. Focus on the big picture while Hexnode works on the details.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    className="p-3 w-full sm:w-64 border border-gray-700 bg-gray-800 text-white rounded" />
-                  <button className="bg-red-600 px-6 py-3 text-white font-medium rounded whitespace-nowrap">LET'S TRY IT OUT!</button>
+        <div className="container mx-auto pt-24 pb-16 px-6">
+          <div className="flex md:flex-row flex-col-reverse justify-between md:py-2  md:mt-3">
+            <div className="flex flex-col justify-center items-start">
+              <div className="flex md:flex-row flex-col  p-5 ">
+                <div className="mr-6">
+                  <div className="text-gray-400 mb-4">
+                    Unified Endpoint Management
+                  </div>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                    Gain control and visibility over your endpoints
+                  </h1>
+                  <p className="text-lg mb-8 text-gray-300">
+                    Hexnode's UEM solution allows you to simplify endpoint
+                    management and free up IT. Focus on the big picture while
+                    Hexnode works on the details.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      className="p-3 w-full sm:w-64 border border-gray-700 bg-gray-800 text-white rounded"
+                    />
+                    <button className="bg-red-600 px-6 py-3 text-white font-medium rounded whitespace-nowrap">
+                      LET'S TRY IT OUT!
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-
-
+            <div className="relative lg:w-[60%]">
+              <img
+                src="/hexnode1.webp"
+                alt="Woman using laptop"
+                className="rounded-lg w-full"
+              />
+              <div className="absolute lg:top-10 top-3 left-10 bg-yellow-100 text-yellow-800 px-4 py-1 rounded-full flex items-center">
+                <span className="mr-2 bg-yellow-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-sm">
+                  ✓
+                </span>
+                Password policy applied
+              </div>
+              <div className="absolute bottom-10 left-10 bg-green-100 text-green-800 px-4 py-1 rounded-full flex items-center">
+                <span className="mr-2 bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-sm">
+                  ✓
+                </span>
+                Device Enrolled
+              </div>
+              <div className="absolute lg:top-1/2 top-40 lg:right-10 -right-4 transform -translate-y-1/2 bg-blue-100 text-blue-800 px-4 py-1 rounded-full flex items-center">
+                <span className="mr-2 bg-blue-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-sm">
+                  ✓
+                </span>
+                TvOS Kiosk Active
+              </div>
+            </div>
           </div>
-          <div className="relative lg:w-[60%]">
-            <img
-              src="/hexnode1.webp"
-              alt="Woman using laptop"
-              className="rounded-lg w-full" />
-            <div className="absolute lg:top-10 top-3 left-10 bg-yellow-100 text-yellow-800 px-4 py-1 rounded-full flex items-center">
-              <span className="mr-2 bg-yellow-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-sm">✓</span>
-              Password policy applied
-            </div>
-            <div className="absolute bottom-10 left-10 bg-green-100 text-green-800 px-4 py-1 rounded-full flex items-center">
-              <span className="mr-2 bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-sm">✓</span>
-              Device Enrolled
-            </div>
-            <div className="absolute lg:top-1/2 top-40 lg:right-10 -right-4 transform -translate-y-1/2 bg-blue-100 text-blue-800 px-4 py-1 rounded-full flex items-center">
-              <span className="mr-2 bg-blue-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-sm">✓</span>
-              TvOS Kiosk Active
+        </div>
+        {/* Logo Section */}
+        <div className="border-t border-gray-800 bg-[rgb(26_28_43)] bg-opacity-[var(--tw-bg-opacity)] py-8">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="flex flex-col items-center md:items-start border-r">
+                <img src="/idc.webp" alt="IDC" className="h-8 mb-4" />
+                <p className="text-sm text-gray-400 text-center md:text-left">
+                  Hexnode is listed as a leader and a major player in IDC
+                  MarketScape UEM Vendors Assessment Reports 2024.
+                </p>
+              </div>
+              <div className="flex flex-col items-center md:items-start border-r">
+                <img src="/gartner.webp" alt="Gartner" className="h-8 mb-4" />
+                <p className="text-sm text-gray-400 text-left">
+                  Hexnode was recognized in the 2025 Gartner® Market Guide for
+                  Unified Endpoint Management Tools.
+                </p>
+              </div>
+              <div className="flex flex-col items-center md:items-start">
+                <img
+                  src="/forrester.webp"
+                  alt="Forrester"
+                  className="h-8 mb-4"
+                />
+                <p className="text-sm text-gray-400 text-center md:text-left">
+                  Forrester includes Hexnode as a Notable vendor in The Unified
+                  Endpoint Management Landscape, Q3 2023.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      {/* Logo Section */}
-      <div className="border-t border-gray-800 bg-[rgb(26_28_43)] bg-opacity-[var(--tw-bg-opacity)] py-8">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-center md:items-start border-r">
-              <img src="/idc.webp" alt="IDC" className="h-8 mb-4" />
-              <p className="text-sm text-gray-400 text-center md:text-left">
-                Hexnode is listed as a leader and a major player in IDC MarketScape UEM Vendors Assessment Reports 2024.
-              </p>
-            </div>
-            <div className="flex flex-col items-center md:items-start border-r">
-              <img src="/gartner.webp" alt="Gartner" className="h-8 mb-4" />
-              <p className="text-sm text-gray-400 text-left">
-                Hexnode was recognized in the 2025 Gartner® Market Guide for Unified Endpoint Management Tools.
-              </p>
-            </div>
-            <div className="flex flex-col items-center md:items-start">
-              <img src="/forrester.webp" alt="Forrester" className="h-8 mb-4" />
-              <p className="text-sm text-gray-400 text-center md:text-left">
-                Forrester includes Hexnode as a Notable vendor in The Unified Endpoint Management Landscape, Q3 2023.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
 
       <section className="why-hex py-[60px] lg:py-[80px] bg-[#F7F7F7] relative">
-
-
-
         <div className="w-[88%] mx-auto max-w-[1300px]">
           <h2 className="text-[32px] md:text-[40px] leading-[40px] md:leading-[1.3] text-center font-bold text-[#020a19] pb-[10px] max-w-[800px] mx-auto">
             Why Hexnode?
@@ -470,8 +481,8 @@ export default function Home() {
                   </div>
                   <p className="text-[16px] lg:text-[18px] leading-[28px] text-left font-regular text-[#333333] mt-[15px] mb-[15px] lg:mb-[20px]">
                     Hexnode UEM automation features help free up IT’s time spent
-                    on mundane and repetitive tasks. Do hours’ worth of work in a
-                    few minutes.
+                    on mundane and repetitive tasks. Do hours’ worth of work in
+                    a few minutes.
                   </p>
                 </div>
                 <a
@@ -584,9 +595,9 @@ export default function Home() {
                     </h4>
                   </div>
                   <p className="text-[16px] lg:text-[18px] leading-[28px] text-left font-regular text-[#333333] mt-[15px] mb-[15px] lg:mb-[20px]">
-                    Create a single policy through Hexnode and apply it on all the
-                    devices in your organization. Any platform or form factor,
-                    achive single pane of glass management with Hexnode.
+                    Create a single policy through Hexnode and apply it on all
+                    the devices in your organization. Any platform or form
+                    factor, achive single pane of glass management with Hexnode.
                   </p>
                 </div>
                 <a
@@ -741,9 +752,16 @@ export default function Home() {
           {features.map((feature, index) => (
             <div key={index} className="p-6 text-center">
               <div className="relative w-full mb-4">
-                <img src={feature.image} alt={feature.title} layout="fill" objectFit="contain" />
+                <img
+                  src={feature.image}
+                  alt={feature.title}
+                  layout="fill"
+                  objectFit="contain"
+                />
               </div>
-              <h3 className="ttext-[24px] xl:text-[32px] leading-[26px] xl:leading-[40px] text-center md:text-left font-bold text-[#020a19] pb-[15px] pt-[20px] md:pb-[20px] md:pt-[40px]">{feature.title}</h3>
+              <h3 className="ttext-[24px] xl:text-[32px] leading-[26px] xl:leading-[40px] text-center md:text-left font-bold text-[#020a19] pb-[15px] pt-[20px] md:pb-[20px] md:pt-[40px]">
+                {feature.title}
+              </h3>
               <p className="text-gray-600 text-left">{feature.description}</p>
             </div>
           ))}
@@ -780,10 +798,9 @@ export default function Home() {
               <div className="p-6">
                 <h2 className="text-2xl font-bold mb-2">Android</h2>
                 <p className="text-gray-600 mb-4">
-                  Remotely deploy, manage, monitor and secure
-                  Android devices in your organization. Set
-                  compliance benchmarks and leverage Android
-                  Enterprise to its full capabilities.
+                  Remotely deploy, manage, monitor and secure Android devices in
+                  your organization. Set compliance benchmarks and leverage
+                  Android Enterprise to its full capabilities.
                 </p>
                 <button className="text-red-500">
                   Try Hexnode on your endpoints
@@ -792,16 +809,14 @@ export default function Home() {
             </div>
 
             <div className="space-y-4">
-              {["iOS", "macOS", "Windows", "tvOS", "FireOS"].map(
-                (platform) => (
-                  <div
-                    key={platform}
-                    className="py-2 px-4 bg-white rounded-lg border-b border-slate-200 text-[24px] font-bold text-left"
-                  >
-                    {platform}
-                  </div>
-                )
-              )}
+              {["iOS", "macOS", "Windows", "tvOS", "FireOS"].map((platform) => (
+                <div
+                  key={platform}
+                  className="py-2 px-4 bg-white rounded-lg border-b border-slate-200 text-[24px] font-bold text-left"
+                >
+                  {platform}
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -841,13 +856,22 @@ export default function Home() {
         >
           <div className="flex py-16 bg-white text-center ">
             <div className="flex justify-center">
-              <div className="flex lg:flex-row flex-col bg-gray-100 p-8 rounded-lg shadow-lg max-w-3xl items-center">
-                <img src="/person3.webp" alt="Testimonial" className="w-40 h-40 rounded-lg object-cover" />
-                <div className="ml-6 text-left">
-                  <p className="text-lg font-medium">"It seemed to be in-line with everything we were looking at."</p>
+              <div className="flex lg:flex-row flex-col bg-gray-100 rounded-lg shadow-lg max-w-3xl items-center">
+                <img
+                  src="/person3.webp"
+                  alt="Testimonial"
+                  className="w-80 h-80 rounded-lg object-cover"
+                />
+                <div className="ml-6 text-left p-2">
+                  <p className="text-lg font-medium">
+                    "It seemed to be in-line with everything we were looking
+                    at."
+                  </p>
                   <div className="mt-4">
                     <p className="font-semibold">Chris Robinson</p>
-                    <p className="text-gray-600 text-sm">Executive Account Manager, NCS</p>
+                    <p className="text-gray-600 text-sm">
+                      Executive Account Manager, NCS
+                    </p>
                   </div>
                 </div>
               </div>
@@ -855,10 +879,17 @@ export default function Home() {
           </div>
           <div className="flex py-16 bg-white text-center ">
             <div className="flex justify-center">
-              <div className="flex lg:flex-row flex-col bg-gray-100 p-8 rounded-lg shadow-lg max-w-3xl items-center">
-                <img src="/person2.webp" alt="Testimonial" className="w-40 h-40 rounded-lg object-cover" />
-                <div className="ml-6 text-left">
-                  <p className="text-lg font-medium">"Most complete MDM solution I found, and I tested many of them, including major names"</p>
+              <div className="flex lg:flex-row flex-col bg-gray-100 rounded-lg shadow-lg max-w-3xl items-center">
+                <img
+                  src="/person2.webp"
+                  alt="Testimonial"
+                  className="w-80 h-80 rounded-lg object-cover"
+                />
+                <div className="ml-6 text-left p-2">
+                  <p className="text-lg font-medium">
+                    "Most complete MDM solution I found, and I tested many of
+                    them, including major names"
+                  </p>
                   <div className="mt-4">
                     <p className="font-semibold">Dalibor Kruljac</p>
                     <p className="text-gray-600 text-sm">KAMELEYA LTD</p>
@@ -869,13 +900,22 @@ export default function Home() {
           </div>
           <div className="flex py-16 bg-white text-center ">
             <div className="flex justify-center">
-              <div className="flex lg:flex-row flex-col bg-gray-100 p-8 rounded-lg shadow-lg max-w-3xl items-center">
-                <img src="/person1.webp" alt="Testimonial" className="w-40 h-40 rounded-lg object-cover" />
-                <div className="ml-6 text-left">
-                  <p className="text-lg font-medium">Hexnode is of great value. Works great with Android and iOS!"</p>
-                  <div className="mt-4">
+              <div className="flex lg:flex-row flex-col bg-gray-100 rounded-lg shadow-lg max-w-3xl items-center">
+                <img
+                  src="/person1.webp"
+                  alt="Testimonial"
+                  className="w-80 h-80 rounded-lg object-cover"
+                />
+                <div className="ml-6 text-left p-2">
+                  <p className="text-lg font-medium">
+                    Hexnode is of great value. Works great with Android and
+                    iOS!"
+                  </p>
+                  <div className="flex flex-col mt-4">
                     <p className="font-semibold">Justin Modrak</p>
-                    <p className="text-gray-600 text-sm">Technology Coordinator</p>
+                    <p className="text-gray-600 text-sm">
+                      Technology Coordinator
+                    </p>
                   </div>
                 </div>
               </div>
@@ -884,7 +924,6 @@ export default function Home() {
         </Slider>
 
         <div className="">
-
           <Slider
             {...clientList}
             className="flex justify-center items-center lg:max-w-[1300px] w-[80vw] mx-auto "
@@ -892,7 +931,6 @@ export default function Home() {
             <div>
               <div className="flex justify-center items-center rounded-md mr-2">
                 <img src="/wolt.svg" alt="wolt" className="h-20" />
-
               </div>
             </div>
             <div>
@@ -903,33 +941,32 @@ export default function Home() {
             <div>
               <div className="flex justify-center items-center rounded-md mr-2">
                 <img src="/costco.svg" alt="Costco" className="h-20" />
-
               </div>
             </div>
             <div>
               {" "}
               <div className="flex justify-center items-center rounded-md mr-2">
                 <img src="/saic.svg" alt="SAIC" className="h-20" />
-
               </div>
             </div>
             <div>
               <div className="flex justify-center items-center rounded-md mr-2">
                 <img src="/hilton.svg" alt="Hilton" className="h-20" />
-
               </div>
             </div>
 
             <div>
               <div className="flex justify-center items-center rounded-md mr-2">
-                <img src="/group1-automotive.webp" alt="Group1" className="h-20" />
-
+                <img
+                  src="/group1-automotive.webp"
+                  alt="Group1"
+                  className="h-20"
+                />
               </div>
             </div>
             <div>
               <div className="flex justify-center items-center rounded-md mr-2">
                 <img src="/lowes.svg" alt="Lowe's" className="h-20" />
-
               </div>
             </div>
 
@@ -944,7 +981,8 @@ export default function Home() {
                     />
                   </div>
                 </div> */}
-          </Slider></div>
+          </Slider>
+        </div>
       </div>
       <div className="bg-[#0A0E14] text-white py-16 text-center">
         <div className="lg:w-[88%] mx-auto lg:max-w-[1300px] w-full">
@@ -955,23 +993,19 @@ export default function Home() {
             TRY HEXNODE FOR FREE
           </button>
         </div>
-
       </div>
       <div className="lg:w-[88%] mx-auto lg:max-w-[1300px] w-full flex justify-between bg-white py-10">
         <div className="flex text-[12px] leading-[24px] text-text-default font-medium">
-          <div>Terms of Use
-          </div>
+          <div>Terms of Use</div>
           <div>-</div>
-          <div>
-            Privacy
-          </div>
+          <div>Privacy</div>
           <div>-</div>
-          <div>
-            Cookies</div>
+          <div>Cookies</div>
         </div>
-        <div className="flex text-[12px] leading-[24px] text-text-default font-medium">Copyright © 2025 Mitsogo Inc. All Rights Reserved.</div>
+        <div className="flex text-[12px] leading-[24px] text-text-default font-medium">
+          Copyright © 2025 Mitsogo Inc. All Rights Reserved.
+        </div>
       </div>
-
     </>
   );
 }
