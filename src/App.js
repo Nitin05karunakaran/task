@@ -994,7 +994,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className="lg:w-[88%] mx-auto lg:max-w-[1300px] w-full flex justify-between bg-white py-10">
+      <div className="lg:w-[88%] mx-auto lg:max-w-[1300px] w-full flex lg:flex-row flex-col lg:justify-between justify-center items-center bg-white py-10">
         <div className="flex text-[12px] leading-[24px] text-text-default font-medium">
           <div>Terms of Use</div>
           <div>-</div>
